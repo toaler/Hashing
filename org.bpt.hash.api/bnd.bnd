@@ -1,0 +1,4 @@
+-buildpath: biz.aQute.bnd.annotation,\
+	osgi.core
+Export-Package: org.bpt.hash.api
+Private-Package: org.bpt.hash.api

@@ -1,0 +1,3 @@
+Private-Package: org.bpt.hash.provider
+Service-Component: *
+Export-Package: org.bpt.hash.provider;provide:=true

@@ -1,0 +1,20 @@
+-runfw: org.apache.felix.framework;version='[4,5)'
+-runee: JavaSE-1.7
+
+-runbundles: org.apache.felix.configadmin;version='[1.4.0,1.4.1)',\
+	org.apache.felix.gogo.command;version='[0.12.0,0.12.1)',\
+	org.apache.felix.gogo.runtime;version='[0.10.0,0.10.1)',\
+	org.apache.felix.gogo.shell;version='[0.10.0,0.10.1)',\
+	org.apache.felix.log;version='[1.0.1,1.0.2)',\
+	org.apache.felix.scr;version='[1.6.2,1.6.3)',\
+	org.bpt.bittools.api;version=latest,\
+	org.bpt.hash.api;version=latest,\
+	org.bpt.hash.provider.provider;version=latest,\
+	osgi.cmpn;version='[4.2.0,4.2.1)'
+
+-runrequires: osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.shell)',\
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.command)',\
+	osgi.identity;filter:='(osgi.identity=osgi.cmpn)',\
+	osgi.identity;filter:='(osgi.identity=org.bpt.hash.provider.provider)'
+-resolve.effective: active
+-resolve: auto

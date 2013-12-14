@@ -1,0 +1,16 @@
+Test-Cases: ${classes;CONCRETE;EXTENDS;junit.framework.TestCase}
+Private-Package: org.bpt.hash.perf
+-runee: JavaSE-1.6
+-runvm: -ea
+-runfw: org.apache.felix.framework
+-buildpath: osgi.core;version='[4.2,5)',\
+	osgi.cmpn,\
+	junit.osgi,\
+	biz.aQute.bnd.annotation,\
+	org.bpt.hash.api;version=latest,\
+	org.bpt.dictionary.api;version=latest,\
+	com.google.caliper-1.0.0
+-runsystempackages: sun.reflect
+Export-Package: org.bpt.hash.perf
+Service-Component: *
+Bundle-Version: 1.0.0

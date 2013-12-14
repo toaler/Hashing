@@ -1,0 +1,48 @@
+-runfw: org.apache.felix.framework;version='[4,5)'
+-runee: JavaSE-1.6
+
+-runbundles: com.google.guava;version='[12.0.1,12.0.2)',\
+	javax.servlet;version='[2.5.0,2.5.1)',\
+	org.apache.felix.configadmin;version='[1.4.0,1.4.1)',\
+	org.apache.felix.gogo.command;version='[0.12.0,0.12.1)',\
+	org.apache.felix.gogo.runtime;version='[0.10.0,0.10.1)',\
+	org.apache.felix.gogo.shell;version='[0.10.0,0.10.1)',\
+	org.apache.felix.http.jetty;version='[2.2.0,2.2.1)',\
+	org.apache.felix.log;version='[1.0.1,1.0.2)',\
+	org.apache.felix.metatype;version='[1.0.4,1.0.5)',\
+	org.apache.felix.scr;version='[1.6.2,1.6.3)',\
+	org.apache.felix.webconsole;version='[3.1.8,3.1.9)',\
+	org.bpt.bittools.api;version=latest,\
+	org.bpt.bittools.impl;version=latest,\
+	org.bpt.dictionary.api;version=latest,\
+	org.bpt.dictionary.provider;version=latest,\
+	org.bpt.hash.api;version=latest,\
+	org.bpt.hash.perf;version=latest,\
+	org.bpt.hash.provider.provider;version=latest,\
+	osgi.cmpn;version='[4.2.0,4.2.1)'
+
+## Uncomment if you need to change the HTTP port
+#-runproperties: org.osgi.service.http.port=8080
+
+-runrequires: osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.shell)',\
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.command)',\
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.webconsole)',\
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.configadmin)',\
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.metatype)',\
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.log)',\
+	osgi.identity;filter:='(&(osgi.identity=osgi.cmpn)(version>=4.2))',\
+	osgi.identity;filter:='(&(osgi.identity=org.apache.felix.scr)(version>=1.6.0))',\
+	osgi.identity;filter:='(osgi.identity=org.bpt.hash.perf)',\
+	osgi.identity;filter:='(osgi.identity=org.bpt.hash.api)',\
+	osgi.identity;filter:='(osgi.identity=org.bpt.hash.provider.provider)',\
+	osgi.identity;filter:='(osgi.identity=org.bpt.bittools.api)',\
+	osgi.identity;filter:='(osgi.identity=org.bpt.bittools.impl)',\
+	osgi.identity;filter:='(osgi.identity=org.bpt.dictionary.api)',\
+	osgi.identity;filter:='(osgi.identity=org.bpt.dictionary.provider)',\
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.http.jetty)'
+-resolve.effective: active
+-resolve: auto
+-runrepos: Local,\
+	Bndtools Hub,\
+	Release,\
+	Workspace

@@ -1,0 +1,11 @@
+-runfw: org.apache.felix.framework;version='[4,5)'
+-runee: JavaSE-1.7
+
+
+-runrequires: osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.shell)',\
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.command)',\
+	osgi.identity;filter:='(osgi.identity=org.bpt.hash.provider.provider)',\
+	osgi.identity;filter:='(osgi.identity=com.google.caliper-1.0.0)',\
+	osgi.identity;filter:='(osgi.identity=org.bpt.hash.perf)'
+-resolve.effective: active
+-resolve: auto
